@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Johanna 藝術花蛋糕 — 商業合作邀請函</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Dancing+Script:wght@400;600;700&family=Noto+Serif+TC:wght@300;400;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:#0e0c0a;
+  display:flex;justify-content:center;align-items:flex-start;
+  min-height:100vh;padding:40px 20px;
+  font-family:'Noto Serif TC',serif;
+}
+
+/* ════════════════════════════
+   CARD
+════════════════════════════ */
+.card{
+  width:880px;
+  background:#1b1812;
+  position:relative;
+  box-shadow:0 50px 150px rgba(0,0,0,.95),0 0 0 1px rgba(201,169,110,.12);
+}
+/* triple gold border */
+.card::before{
+  content:'';position:absolute;inset:-4px;z-index:-1;
+  background:linear-gradient(145deg,#f0d898,#8a6530 25%,#c9a96e 50%,#7a5520 75%,#f0d898);
+}
+
+/* ════════════════════════════
+   PHOTO SECTION
+════════════════════════════ */
+.photo-wrap{
+  position:relative;width:100%;height:460px;overflow:hidden;
+  background:#1b1812;
+}
+.photo-wrap img{
+  width:100%;height:100%;object-fit:cover;object-position:center top;
+  display:block;filter:brightness(.78) saturate(1.1) contrast(1.05);
+}
+
+/* gradient overlays */
+.pv-sides{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 100% at 50% 50%,transparent 40%,rgba(0,0,0,.65) 100%);
+}
+.pv-bottom{
+  position:absolute;bottom:0;left:0;right:0;height:260px;
+  background:linear-gradient(to bottom,transparent 0%,rgba(27,24,18,.98) 100%);
+}
+
+/* ornate corner frames */
+.corner{position:absolute;z-index:8;width:90px;height:90px;}
+.c-tl{top:16px;left:16px;}
+.c-tr{top:16px;right:16px;transform:scaleX(-1);}
+.c-bl{bottom:16px;left:16px;transform:scaleY(-1);}
+.c-br{bottom:16px;right:16px;transform:scale(-1,-1);}
+
+/* brand overlay */
+.photo-brand{
+  position:absolute;bottom:28px;left:64px;z-index:9;
+}
+.brand-en{
+  font-family:'Dancing Script',cursive;font-weight:400;
+  font-size:92px;color:#fff;line-height:.88;
+  text-shadow:0 6px 40px rgba(0,0,0,.7),0 0 80px rgba(201,169,110,.15);
+  letter-spacing:3px;
+}
+.brand-zh{
+  font-size:14px;letter-spacing:11px;color:#c9a96e;
+  margin-top:8px;font-weight:300;
+}
+.brand-rule{
+  margin-top:12px;width:300px;height:1px;
+  background:linear-gradient(to right,#c9a96e 55%,transparent);
+}
+.brand-rule2{
+  margin-top:3px;width:200px;height:1px;
+  background:linear-gradient(to right,rgba(201,169,110,.4) 55%,transparent);
+}
+
+/* ════════════════════════════
+   CONTENT
+════════════════════════════ */
+.content{
+  padding:56px 72px 52px;
+  background:#1b1812;
+  position:relative;overflow:hidden;
+}
+/* subtle texture */
+.content::before{
+  content:'';position:absolute;inset:0;opacity:.025;
+  background-image:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0 L45 35 L80 40 L45 45 L40 80 L35 45 L0 40 L35 35 Z' fill='%23c9a96e'/%3E%3C/svg%3E");
+  background-size:80px 80px;
+}
+
+/* ── ornament header ── */
+.orn{text-align:center;margin-bottom:42px;}
+.orn-row{display:flex;align-items:center;justify-content:center;gap:10px;margin:5px 0;}
+.orn-l{flex:1;height:1px;background:linear-gradient(to right,transparent,#c9a96e 50%,transparent);max-width:200px;}
+.orn-d{width:5px;height:5px;background:#c9a96e;transform:rotate(45deg);}
+.orn-dd{width:3px;height:3px;background:#8a6530;transform:rotate(45deg);}
+.orn-gem{
+  width:12px;height:12px;background:linear-gradient(135deg,#f0d898,#c9a96e);
+  transform:rotate(45deg);
+  box-shadow:0 0 12px rgba(201,169,110,.6),0 0 24px rgba(201,169,110,.2);
+}
+.orn-label{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:11px;letter-spacing:7px;color:#c9a96e;margin:8px 0 0;
+}
+
+/* ── headline ── */
+.headline{text-align:center;margin-bottom:44px;}
+.headline h1{
+  font-family:'Cormorant Garamond',serif;font-size:31px;
+  font-weight:300;font-style:italic;
+  color:#f0e8d8;letter-spacing:4px;line-height:1.7;
+}
+.headline-sub{
+  font-size:11.5px;letter-spacing:3px;color:#6a5e4c;margin-top:14px;
+}
+
+/* ── body ── */
+.body-copy{
+  font-size:13.5px;color:#b0a590;line-height:2.4;letter-spacing:.8px;
+  text-align:justify;margin-bottom:46px;
+  padding:18px 24px 18px 22px;
+  border-left:2px solid #c9a96e;
+  background:linear-gradient(to right,rgba(201,169,110,.04),transparent);
+}
+
+/* ── info grid ── */
+.info-grid{
+  display:grid;grid-template-columns:1fr 1fr 2fr;
+  gap:1px;background:#2e2a22;
+  border:1px solid #2e2a22;
+  margin-bottom:48px;
+}
+.ic{
+  background:#1b1812;padding:24px 28px;position:relative;
+}
+.ic::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(to right,#c9a96e 40%,transparent);
+}
+.ic::after{
+  content:'';position:absolute;bottom:0;right:0;
+  width:20px;height:20px;
+  border-right:1px solid rgba(201,169,110,.2);
+  border-bottom:1px solid rgba(201,169,110,.2);
+}
+.ic-tag{
+  display:block;font-size:9px;letter-spacing:5px;color:#c9a96e;
+  font-family:'Cormorant Garamond',serif;text-transform:uppercase;
+  margin-bottom:10px;
+}
+.ic-val{font-size:14px;color:#f0e8d8;letter-spacing:.7px;line-height:1.75;}
+.ic.full{grid-column:1/-1;}
+
+/* ── divider ── */
+.div-wrap{display:flex;align-items:center;gap:14px;margin:38px 0;}
+.div-hr{flex:1;height:1px;background:linear-gradient(to right,transparent,#2e2a22 50%,transparent);}
+.div-gem{
+  width:9px;height:9px;background:linear-gradient(135deg,#f0d898,#c9a96e);
+  transform:rotate(45deg);box-shadow:0 0 10px rgba(201,169,110,.5);
+}
+
+/* ════════════════════════════
+   MAP
+════════════════════════════ */
+.map-hdr{
+  display:flex;align-items:center;gap:14px;margin-bottom:20px;
+  font-family:'Cormorant Garamond',serif;font-size:10px;
+  letter-spacing:6px;color:#c9a96e;text-transform:uppercase;font-style:italic;
+}
+.map-hdr::before,.map-hdr::after{
+  content:'';flex:1;height:1px;
+  background:linear-gradient(to right,transparent,#3a3020 50%,transparent);
+}
+.map-box{
+  background:#100e0c;border:1px solid #2e2a22;padding:20px;
+  position:relative;
+}
+.map-box::after{
+  content:'';position:absolute;inset:8px;
+  border:1px solid rgba(201,169,110,.06);pointer-events:none;
+}
+.map-note{
+  display:flex;justify-content:space-between;flex-wrap:wrap;
+  margin-top:14px;gap:8px;font-size:10px;color:#4a4030;letter-spacing:1.5px;
+}
+
+/* ════════════════════════════
+   FOOTER
+════════════════════════════ */
+.footer{
+  background:#130f0a;border-top:1px solid #2e2a22;
+  padding:32px 72px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.foot-brand{
+  font-family:'Dancing Script',cursive;font-size:40px;
+  color:#c9a96e;letter-spacing:2px;
+}
+.foot-right{text-align:right;font-size:11px;line-height:2.1;letter-spacing:2px;}
+.foot-right .l1{color:#7a6a50;}
+.foot-right .l2{color:#4a3e2a;}
+.foot-right .l3{color:#2e2418;font-size:9px;}
+</style>
+</head>
+<body>
+<div class="card">
+
+<!-- ══ PHOTO ══ -->
+<div class="photo-wrap">
+  <img
+    src="johanna_store.jpg"
+    onerror="this.onerror=null;this.src='https://d10vnvbjqqg3q7.cloudfront.net/05d9ed28-46c2-4d7e-bff1-0d9870e83298/media/19e32344-298d-4933-86c2-865dd3ef7198/19e32344-298d-4933-86c2-865dd3ef7198-1440x960.jpg'"
+    alt="Johanna 藝術花蛋糕">
+
+  <div class="pv-sides"></div>
+  <div class="pv-bottom"></div>
+
+  <!-- corner ornaments -->
+  <div class="corner c-tl">
+    <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 10 L10 55" stroke="#c9a96e" stroke-width="1.8" fill="none"/>
+      <path d="M10 10 L55 10" stroke="#c9a96e" stroke-width="1.8" fill="none"/>
+      <path d="M10 10 L22 10 M10 10 L10 22" stroke="#f0d898" stroke-width=".7" fill="none"/>
+      <circle cx="10" cy="10" r="3.5" fill="#c9a96e"/>
+      <path d="M22 10 Q32 2 42 10" stroke="#c9a96e" stroke-width=".8" fill="rgba(201,169,110,.12)"/>
+      <path d="M10 22 Q2 32 10 42" stroke="#c9a96e" stroke-width=".8" fill="rgba(201,169,110,.12)"/>
+      <circle cx="55" cy="10" r="2" fill="rgba(201,169,110,.4)"/>
+      <circle cx="10" cy="55" r="2" fill="rgba(201,169,110,.4)"/>
+    </svg>
+  </div>
+  <div class="corner c-tr">
+    <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 10 L10 55" stroke="#c9a96e" stroke-width="1.8" fill="none"/>
+      <path d="M10 10 L55 10" stroke="#c9a96e" stroke-width="1.8" fill="none"/>
+      <circle cx="10" cy="10" r="3.5" fill="#c9a96e"/>
+      <path d="M22 10 Q32 2 42 10" stroke="#c9a96e" stroke-width=".8" fill="rgba(201,169,110,.12)"/>
+      <path d="M10 22 Q2 32 10 42" stroke="#c9a96e" stroke-width=".8" fill="rgba(201,169,110,.12)"/>
+      <circle cx="55" cy="10" r="2" fill="rgba(201,169,110,.4)"/>
+      <circle cx="10" cy="55" r="2" fill="rgba(201,169,110,.4)"/>
+    </svg>
+  </div>
+  <div class="corner c-bl">
+    <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 10 L10 55 M10 10 L55 10" stroke="#c9a96e" stroke-width="1.8" fill="none"/>
+      <circle cx="10" cy="10" r="3.5" fill="#c9a96e"/>
+    </svg>
+  </div>
+  <div class="corner c-br">
+    <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 10 L10 55 M10 10 L55 10" stroke="#c9a96e" stroke-width="1.8" fill="none"/>
+      <circle cx="10" cy="10" r="3.5" fill="#c9a96e"/>
+    </svg>
+  </div>
+
+  <div class="photo-brand">
+    <div class="brand-en">Johanna</div>
+    <div class="brand-zh">藝　術　花　蛋　糕</div>
+    <div class="brand-rule"></div>
+    <div class="brand-rule2"></div>
+  </div>
+</div>
+
+<!-- ══ CONTENT ══ -->
+<div class="content">
+
+  <!-- ornament -->
+  <div class="orn">
+    <div class="orn-row"><div class="orn-l"></div><div class="orn-dd"></div><div class="orn-d"></div><div class="orn-gem"></div><div class="orn-d"></div><div class="orn-dd"></div><div class="orn-l"></div></div>
+    <div class="orn-label">Business Collaboration Invitation &nbsp;·&nbsp; 商業合作邀請函</div>
+    <div class="orn-row"><div class="orn-l"></div><div class="orn-dd"></div><div class="orn-d"></div><div class="orn-gem"></div><div class="orn-d"></div><div class="orn-dd"></div><div class="orn-l"></div></div>
+  </div>
+
+  <!-- headline -->
+  <div class="headline">
+    <h1>謹啟者，誠摯邀請貴單位蒞臨<br>藝術花蛋糕商業合作交流茶會</h1>
+    <div class="headline-sub">— We would be honoured by your presence —</div>
+  </div>
+
+  <!-- body -->
+  <div class="body-copy">
+    Johanna 藝術花蛋糕，以花藝美學為魂、以烘焙工藝為體，深耕高雄鼓山多年，致力呈現兼具視覺與味覺雙重饗宴之精品蛋糕。<br><br>
+    此次，我們誠摯邀請貴單位蒞臨本次商業合作交流茶會，席間將展示本品牌最新系列作品，並就禮贈品合作、品牌聯名、通路拓展及客製化服務等面向深入探討，期望與志同道合之夥伴，共同開創嶄新商業藍圖。
+  </div>
+
+  <!-- info -->
+  <div class="info-grid">
+    <div class="ic">
+      <span class="ic-tag">Date 日期</span>
+      <div class="ic-val">2026年6月13日<br><span style="font-size:12px;color:#6a5e4c">Saturday · 星期六</span></div>
+    </div>
+    <div class="ic">
+      <span class="ic-tag">Time 時間</span>
+      <div class="ic-val">14:00 — 16:00<br><span style="font-size:12px;color:#6a5e4c">下午二時至四時</span></div>
+    </div>
+    <div class="ic">
+      <span class="ic-tag">Venue 場地</span>
+      <div class="ic-val">Johanna 藝術花蛋糕<br><span style="font-size:12px;color:#6a5e4c">高雄市鼓山區</span></div>
+    </div>
+    <div class="ic full">
+      <span class="ic-tag">Address 地址</span>
+      <div class="ic-val">高雄市鼓山區中華一路 29 巷 48 弄 76 號 1 樓
+        <span style="font-size:11.5px;color:#5a5040;">&ensp;|&ensp; 804, No.76, Aly.48, Ln.29, Zhonghua 1st Rd., Gushan Dist., Kaohsiung</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- divider -->
+  <div class="div-wrap"><div class="div-hr"></div><div class="div-gem"></div><div class="div-hr"></div></div>
+
+  <!-- MAP -->
+  <div class="map-hdr">Location Map &nbsp;·&nbsp; 交通位置圖</div>
+  <div class="map-box">
+
+    <!--
+      ══════════════════════════════════════════════
+      SVG MAP v4 — 完全對照 Google Maps 實際標注
+      佈局（北朝上）：
+        ・中華一路 — 左側斜向主幹道（NW→SE）
+        ・裕興路37巷 — Johanna 左側小巷
+        ・華泰路185巷 — Johanna/加賀 正東方橫路（通往停車場）
+        ・華泰路211巷 — 停車場北側橫路
+        ・神農路 — 右側南北向主幹
+        ・綠圓道公園 — 左下方綠地
+      地點：
+        ・Johanna 藝術花蛋糕（中央偏左下）
+        ・本業加賀大樓（緊接 Johanna 正北，裕興路37巷25號）
+        ・宜舍鼓山華泰停車場（東北方，步行3分）
+        ・夏夫小農（北方）
+      ══════════════════════════════════════════════
+    -->
+    <svg viewBox="0 0 736 440" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+      <defs>
+        <pattern id="parkPat" x="0" y="0" width="7" height="7" patternUnits="userSpaceOnUse">
+          <rect width="7" height="7" fill="#1a2a18"/>
+          <circle cx="3.5" cy="3.5" r="1.2" fill="#2e4a26" opacity=".9"/>
+        </pattern>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="5" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="softglow" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur stdDeviation="3" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <!-- ══ BACKGROUND ══ -->
+      <rect width="736" height="440" fill="#0e0c0a"/>
+
+      <!-- ══ CITY BLOCKS ══ -->
+      <!-- NW block (left of 中華一路, above park) -->
+      <polygon points="0,0 108,0 118,130 0,130" fill="#1a1714"/>
+      <!-- North blocks (above 華泰路185巷) -->
+      <rect x="200" y="0" width="200" height="230" fill="#1a1714"/>
+      <rect x="430" y="0" width="170" height="195" fill="#1a1714"/>
+      <!-- Centre block (between alleys, around 本業加賀/Johanna) -->
+      <rect x="155" y="230" width="210" height="95" fill="#1a1714"/>
+      <!-- East block (right of 神農路 area) -->
+      <rect x="638" y="0" width="98" height="440" fill="#1a1714"/>
+      <!-- South blocks -->
+      <rect x="0" y="390" width="736" height="50" fill="#1a1714"/>
+      <rect x="200" y="335" width="420" height="55" fill="#1a1714"/>
+      <!-- Right mid block -->
+      <rect x="430" y="195" width="200" height="140" fill="#1a1714"/>
+
+      <!-- ══ 綠圓道公園 (SW corner) ══ -->
+      <rect x="0" y="280" width="108" height="110" fill="url(#parkPat)"/>
+      <ellipse cx="54" cy="335" rx="40" ry="38" fill="#203020" opacity=".55"/>
+      <text x="54" y="330" font-family="Noto Serif TC,serif" font-size="8" fill="#3a6030" text-anchor="middle">綠圓道</text>
+      <text x="54" y="342" font-family="Noto Serif TC,serif" font-size="8" fill="#3a6030" text-anchor="middle">公園</text>
+
+      <!-- ══ ROADS ══ -->
+
+      <!-- 中華一路 (diagonal NW→SE, left main road) ⭐ -->
+      <polygon points="95,0 140,0 200,440 152,440" fill="#3a342a"/>
+      <line x1="117" y1="0" x2="177" y2="440" stroke="#5a5040" stroke-width=".9" stroke-dasharray="16,12"/>
+
+      <!-- 神農路 (N-S, right side) -->
+      <rect x="610" y="0" width="26" height="440" fill="#2e2822"/>
+      <line x1="623" y1="0" x2="623" y2="440" stroke="#4a4030" stroke-width=".8" stroke-dasharray="14,10"/>
+
+      <!-- 上方橫路（連接夏夫小農方向） -->
+      <rect x="140" y="82" width="470" height="22" fill="#2a2620"/>
+
+      <!-- 華泰路185巷 (E-W, level of 本業加賀, main walking route) -->
+      <rect x="155" y="228" width="458" height="16" fill="#2e2822"/>
+
+      <!-- 華泰路211巷 (E-W, above parking) -->
+      <rect x="400" y="160" width="212" height="14" fill="#242018"/>
+
+      <!-- 裕興路 (N-S road, slightly wider, west of Johanna) -->
+      <rect x="148" y="82" width="20" height="310" fill="#2a2620"/>
+      <line x1="158" y1="82" x2="158" y2="392" stroke="#4a4030" stroke-width=".7" stroke-dasharray="10,8"/>
+      <!-- 裕興路37巷 (short E-W alley branching east, at 本業加賀 level) -->
+      <rect x="168" y="228" width="30" height="10" fill="#1e1c18"/>
+
+      <!-- 29巷 (tiny E-W off 中華一路, level of Johanna) -->
+      <rect x="163" y="318" width="90" height="10" fill="#1a1810"/>
+
+      <!-- 48弄 (tiny N-S, connecting 29巷 area) -->
+      <rect x="196" y="230" width="9" height="100" fill="#1a1810"/>
+
+      <!-- ══ ROAD LABELS ══ -->
+
+      <!-- 中華一路 diagonal -->
+      <text transform="rotate(-74,148,310)" x="148" y="310"
+        font-family="Noto Serif TC,serif" font-size="10" fill="#8a7a58"
+        letter-spacing="3" text-anchor="middle">中　華　一　路</text>
+
+      <!-- 神農路 -->
+      <text x="623" y="350" font-family="Noto Serif TC,serif" font-size="9" fill="#5a5040"
+        text-anchor="middle" transform="rotate(-90,623,350)" letter-spacing="2">神　農　路</text>
+
+      <!-- 華泰路185巷 -->
+      <text x="460" y="224" font-family="Noto Serif TC,serif" font-size="8.5" fill="#6a5a40" text-anchor="middle">華泰路185巷</text>
+
+      <!-- 華泰路211巷 -->
+      <text x="500" y="156" font-family="Noto Serif TC,serif" font-size="8" fill="#5a5040" text-anchor="middle">華泰路211巷</text>
+
+      <!-- 裕興路 (vertical label on road) -->
+      <text x="158" y="340" font-family="Noto Serif TC,serif" font-size="9" fill="#7a6a50"
+        text-anchor="middle" transform="rotate(-90,158,340)" letter-spacing="2">裕　興　路</text>
+
+      <!-- 裕興路37巷 callout with arrow -->
+      <!-- arrow line from label to alley -->
+      <line x1="60" y1="218" x2="152" y2="232" stroke="#8a7a58" stroke-width=".9" stroke-dasharray="4,3"/>
+      <circle cx="152" cy="232" r="2.5" fill="#8a7a58"/>
+      <!-- label box -->
+      <rect x="2" y="205" width="70" height="22" rx="3" fill="#1e1a12" stroke="#5a4e38" stroke-width=".8"/>
+      <text x="37" y="214" font-family="Noto Serif TC,serif" font-size="7.5" fill="#a09060" text-anchor="middle">裕興路37巷</text>
+      <text x="37" y="223" font-family="Noto Serif TC,serif" font-size="6.5" fill="#6a5840" text-anchor="middle">（本業加賀大樓）</text>
+
+      <!-- 29巷 -->
+      <text x="208" y="315" font-family="Noto Serif TC,serif" font-size="7" fill="#4a4030" text-anchor="start">29巷</text>
+
+      <!-- 48弄 -->
+      <text x="194" y="280" font-family="Noto Serif TC,serif" font-size="7" fill="#3a3828" text-anchor="end">48弄</text>
+
+      <!-- ══ 夏夫小農 (north landmark) ══ -->
+      <circle cx="295" cy="65" r="10" fill="#3a2a14" stroke="#8a6030" stroke-width=".8"/>
+      <text x="295" y="69" font-family="Arial,sans-serif" font-size="10" fill="#c09050" text-anchor="middle">🍴</text>
+      <text x="320" y="69" font-family="Noto Serif TC,serif" font-size="9" fill="#7a6040">夏夫小農</text>
+
+      <!-- ══ 本業加賀大樓 (directly north of Johanna) ══ -->
+      <!-- building block -->
+      <rect x="168" y="238" width="60" height="42" rx="1" fill="#222018" stroke="#8a7040" stroke-width="1"/>
+      <line x1="168" y1="252" x2="228" y2="252" stroke="#3a3020" stroke-width=".8"/>
+      <line x1="168" y1="262" x2="228" y2="262" stroke="#3a3020" stroke-width=".8"/>
+      <line x1="168" y1="272" x2="228" y2="272" stroke="#3a3020" stroke-width=".8"/>
+      <!-- grey pin like Google Maps -->
+      <circle cx="198" cy="234" r="9" fill="#888" stroke="#666" stroke-width="1"/>
+      <circle cx="198" cy="234" r="5" fill="#ccc"/>
+      <circle cx="198" cy="234" r="2.5" fill="#555"/>
+      <!-- label -->
+      <text x="198" y="250" font-family="Noto Serif TC,serif" font-size="7.5" fill="#c0a870" text-anchor="middle">本業加賀</text>
+      <text x="198" y="260" font-family="Noto Serif TC,serif" font-size="7.5" fill="#c0a870" text-anchor="middle">大樓</text>
+      <text x="198" y="270" font-family="Noto Serif TC,serif" font-size="6" fill="#7a6040" text-anchor="middle">裕興路37巷25號</text>
+
+      <!-- ══ WALKING PATH (yellow dots) ══ -->
+      <!-- From 本業加賀 → east on 華泰路185巷 → north → parking P -->
+      <g fill="#d4b800" opacity=".9">
+        <!-- east along 185巷, starting from 本業加賀 -->
+        <circle cx="235" cy="236" r="4"/>
+        <circle cx="258" cy="236" r="4"/>
+        <circle cx="281" cy="236" r="4"/>
+        <circle cx="304" cy="236" r="4"/>
+        <circle cx="327" cy="236" r="4"/>
+        <circle cx="350" cy="236" r="4"/>
+        <circle cx="373" cy="236" r="4"/>
+        <circle cx="396" cy="236" r="4"/>
+        <circle cx="419" cy="236" r="4"/>
+        <circle cx="442" cy="236" r="4"/>
+        <circle cx="460" cy="236" r="4"/>
+        <!-- turn north along right alley -->
+        <circle cx="476" cy="224" r="4"/>
+        <circle cx="476" cy="210" r="4"/>
+        <circle cx="476" cy="196" r="4"/>
+        <!-- east to parking -->
+        <circle cx="492" cy="183" r="4"/>
+        <circle cx="510" cy="174" r="4"/>
+        <circle cx="528" cy="168" r="4"/>
+      </g>
+      <!-- walk time label -->
+      <rect x="348" y="248" width="86" height="20" rx="10" fill="#1a2030" opacity=".92"/>
+      <text x="391" y="261" font-family="Noto Serif TC,serif" font-size="8.5" fill="#a0c0e8" text-anchor="middle">🚶 步行約3分鐘</text>
+
+      <!-- ══ 停車場 (宜舍鼓山華泰) NE area ══ -->
+      <!-- Blue P box like Google Maps annotation -->
+      <rect x="500" y="112" width="100" height="80" rx="3" fill="#101c14" stroke="#1c4a26" stroke-width="2"/>
+      <rect x="504" y="116" width="92" height="72" rx="2" fill="none" stroke="#2a6040" stroke-width="1"/>
+      <text x="550" y="158" font-family="Arial,sans-serif" font-size="34" font-weight="bold" fill="#2e8050" text-anchor="middle">P</text>
+      <text x="550" y="128" font-family="Noto Serif TC,serif" font-size="7" fill="#2a5030" text-anchor="middle">宜舍鼓山華泰</text>
+      <text x="550" y="139" font-family="Noto Serif TC,serif" font-size="7" fill="#2a5030" text-anchor="middle">停車場</text>
+      <text x="550" y="182" font-family="Noto Serif TC,serif" font-size="7" fill="#2a4a30" text-anchor="middle">華泰路185/211巷</text>
+
+      <!-- ══ JOHANNA PIN (lower-left center) ══ -->
+      <!-- glow rings -->
+      <circle cx="208" cy="340" r="38" fill="#c9a96e" opacity=".04"/>
+      <circle cx="208" cy="340" r="24" fill="#c9a96e" opacity=".08"/>
+      <circle cx="208" cy="340" r="14" fill="#c9a96e" opacity=".2"/>
+      <circle cx="208" cy="340" r="8"  fill="#c9a96e" opacity=".65"/>
+      <circle cx="208" cy="340" r="4"  fill="#fff"/>
+      <!-- pin stem -->
+      <line x1="208" y1="340" x2="208" y2="298" stroke="#c9a96e" stroke-width="2.5"/>
+      <!-- pin head -->
+      <circle cx="208" cy="288" r="16" fill="#c9a96e" filter="url(#glow)"/>
+      <circle cx="208" cy="288" r="11" fill="#1b1812"/>
+      <text x="208" y="293" font-family="Dancing Script,cursive" font-size="13"
+        fill="#c9a96e" text-anchor="middle">J</text>
+      <!-- label bubble -->
+      <rect x="108" y="258" width="200" height="24" rx="12" fill="#1e1a12" stroke="#c9a96e" stroke-width="1"/>
+      <text x="208" y="274" font-family="Dancing Script,cursive" font-size="13"
+        fill="#c9a96e" text-anchor="middle">Johanna 藝術花蛋糕</text>
+      <!-- address sub-label -->
+      <rect x="108" y="354" width="200" height="32" rx="2" fill="#1a1510" stroke="#3a3020" stroke-width=".8" opacity=".9"/>
+      <text x="208" y="368" font-family="Noto Serif TC,serif" font-size="8" fill="#9a8060" text-anchor="middle">中華一路29巷48弄76號</text>
+      <text x="208" y="380" font-family="Noto Serif TC,serif" font-size="7" fill="#5a4030" text-anchor="middle">1F &nbsp;·&nbsp; Johanna 藝術花蛋糕</text>
+
+      <!-- Route 17 marker -->
+      <circle cx="110" cy="400" r="14" fill="#1a3060" stroke="#2a4080" stroke-width="1.2"/>
+      <text x="110" y="404" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#8090d0" text-anchor="middle">17</text>
+
+      <!-- ══ NORTH COMPASS ══ -->
+      <g transform="translate(690,56)">
+        <circle cx="0" cy="0" r="30" fill="#130f0a" stroke="#3a2e1e" stroke-width="1.2"/>
+        <circle cx="0" cy="0" r="27" fill="none" stroke="#2a2216" stroke-width=".5"/>
+        <line x1="-20" y1="0" x2="20" y2="0" stroke="#2a2216" stroke-width=".8"/>
+        <line x1="0" y1="-20" x2="0" y2="20" stroke="#2a2216" stroke-width=".8"/>
+        <polygon points="0,-21 -5.5,3 0,1 5.5,3" fill="#c9a96e"/>
+        <polygon points="0,21 -5.5,-3 0,-1 5.5,-3" fill="#3a3020"/>
+        <circle cx="0" cy="0" r="3.5" fill="#130f0a" stroke="#c9a96e" stroke-width="1"/>
+        <text x="0" y="-25" font-family="Cormorant Garamond,serif" font-size="12" font-weight="600" fill="#c9a96e" text-anchor="middle">N</text>
+        <text x="0"  y="36" font-family="Cormorant Garamond,serif" font-size="9" fill="#4a4030" text-anchor="middle">S</text>
+        <text x="-36" y="4" font-family="Cormorant Garamond,serif" font-size="9" fill="#4a4030" text-anchor="middle">W</text>
+        <text x="36"  y="4" font-family="Cormorant Garamond,serif" font-size="9" fill="#4a4030" text-anchor="middle">E</text>
+      </g>
+
+      <!-- ══ LEGEND ══ -->
+      <rect x="14" y="392" width="440" height="38" rx="2" fill="#130f0a" stroke="#2e2a1e" stroke-width="1" opacity=".95"/>
+      <!-- Johanna -->
+      <circle cx="34" cy="407" r="7" fill="#c9a96e" opacity=".75"/>
+      <text x="34" y="411" font-family="Dancing Script,cursive" font-size="8" fill="#1b1812" text-anchor="middle">J</text>
+      <text x="48" y="411" font-family="Noto Serif TC,serif" font-size="8.5" fill="#b0a080">Johanna（中華一路29巷48弄76號）</text>
+      <!-- landmark -->
+      <circle cx="34" cy="422" r="6" fill="#888" stroke="#666" stroke-width=".8"/>
+      <circle cx="34" cy="422" r="3.5" fill="#ccc"/>
+      <text x="48" y="426" font-family="Noto Serif TC,serif" font-size="8.5" fill="#b0a080">本業加賀大樓（裕興路37巷25號，緊鄰）&nbsp;·&nbsp; 🅿 宜舍鼓山華泰停車場（步行3分）</text>
+
+    </svg>
+
+    <div class="map-note">
+      <span>📍 由中華一路轉29巷，循48弄至76號即達</span>
+      <span>🏛 本業加賀大樓（裕興路37巷25號）緊鄰活動地點</span>
+      <span>🅿 停車場（華泰路185/211巷）步行約3分鐘</span>
+    </div>
+  </div>
+
+</div><!-- /content -->
+
+<!-- ══ FOOTER ══ -->
+<div class="footer">
+  <div class="foot-brand">Johanna</div>
+  <div class="foot-right">
+    <div class="l1">敬請確認出席 &nbsp;·&nbsp; 如蒙應允，不勝感激</div>
+    <div class="l2">Line: @johanna9088 &nbsp;|&nbsp; 高雄市鼓山區</div>
+    <div class="l3">© 2026 Johanna 藝術花蛋糕 &nbsp;·&nbsp; Gushan, Kaohsiung</div>
+  </div>
+</div>
+
+</div><!-- /card -->
+
+<script>
+/* ── 照片說明 ──
+   在 HTML 同一資料夾中放入 johanna_store.jpg
+   即可顯示您的店面原始照片。
+   若找不到本機檔案，將自動載入官網圖片。
+*/
+</script>
+</body>
+</html>
