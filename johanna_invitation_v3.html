@@ -254,9 +254,8 @@ body{
    MOBILE RESPONSIVE
 ════════════════════════════ */
 
-/* 全域防止水平捲動 */
-html, body{overflow-x:hidden;}
-.card{overflow:hidden;}
+/* 防止任何元素超出卡片寬度 */
+.card, .card *{max-width:100%;}
 
 @media (max-width:600px){
   body{padding:0;}
@@ -269,39 +268,40 @@ html, body{overflow-x:hidden;}
   .c-bl{bottom:8px;left:8px;}
   .c-br{bottom:8px;right:8px;}
 
-  /* 品牌文字：vw 讓字體跟螢幕等比縮放 */
+  /* 品牌文字：用 vw 讓它跟螢幕寬度等比縮放 */
   .photo-brand{bottom:14px;left:16px;right:16px;}
   .brand-en{
-    font-size:clamp(28px, 10vw, 52px);
+    font-size:clamp(32px, 11vw, 52px);
     letter-spacing:1px;
-    white-space:nowrap;
+    white-space:nowrap;overflow:hidden;
   }
   .brand-zh{font-size:11px;letter-spacing:5px;margin-top:4px;}
   .brand-rule{width:60%;}
   .brand-rule2{width:40%;}
 
   /* 內文區 */
-  .content{padding:28px 16px 32px;overflow:hidden;}
-  .orn-label{font-size:9px;letter-spacing:3px;}
+  .content{padding:28px 16px 32px;}
+  .orn-label{font-size:9px;letter-spacing:4px;}
 
-  /* 標題 */
+  /* 標題：letter-spacing 大 + 中文 = 超寬，必須收窄 */
   .headline h1{
-    font-size:17px;
+    font-size:16px;
     letter-spacing:1px;
-    line-height:1.9;
-    word-break:keep-all;
+    line-height:1.8;
   }
   .headline-sub{font-size:10px;letter-spacing:1px;}
 
   /* 內文段落 */
   .body-copy{font-size:13px;line-height:2.2;padding:14px 14px 14px 16px;}
 
-  /* 資訊格線：兩欄 */
+  /* 資訊格線：改成兩欄堆疊 */
   .info-grid{grid-template-columns:1fr 1fr;}
   .ic{padding:14px 12px;}
   .ic.full{grid-column:1/-1;}
   .ic-val{font-size:12.5px;}
   .ic-tag{letter-spacing:3px;}
+
+  /* 地址英文別溢出 */
   .ic-val span{font-size:10px !important;word-break:break-all;}
 
   /* 停車卡片 */
@@ -309,23 +309,13 @@ html, body{overflow-x:hidden;}
   .pk-name{font-size:12.5px;}
   .pk-btn{width:100%;justify-content:center;}
 
-  /* ★ Footer：垂直排列，padding 縮小，letter-spacing 收窄防溢出 */
+  /* Footer */
   .footer{
-    flex-direction:column;
-    align-items:center;
-    gap:14px;
-    padding:24px 16px;
-    width:100%;
-    box-sizing:border-box;
+    flex-direction:column;align-items:center;gap:14px;
+    padding:24px 16px;text-align:center;
   }
+  .foot-right{text-align:center;}
   .foot-brand{font-size:32px;}
-  .foot-right{
-    text-align:center;
-    font-size:10px;
-    letter-spacing:1px;
-    line-height:2;
-    word-break:break-all;
-  }
 }
 </style>
 </head>
@@ -399,13 +389,13 @@ html, body{overflow-x:hidden;}
 
   <!-- headline -->
   <div class="headline">
-    <h1>誠摯邀請各位舊雨新知蒞臨<br>Johanna藝術花蛋糕／</div> art 幸福策展室開幕茶會</h1>
+    <h1>誠摯邀請各位舊雨新知蒞臨<br>Johanna藝術花蛋糕／J art 幸福策展室開幕茶會</h1>
     <div class="headline-sub">— We would be honoured by your presence —</div>
   </div>
 
   <!-- body -->
   <div class="body-copy">
-    告別熟悉的舊角落，迎來全新裝修、全新氣象的 Johanna藝術花蛋糕／<br>J art 幸福策展室。<br>
+    告別熟悉的舊角落，迎來全新裝修、全新氣象的 Johanna藝術花蛋糕／J art 幸福策展室。<br>
     感謝上帝的恩典與帶領，讓我們在新的地方落地生根。過去的歲月點滴我們銘記在心，而現在，我們要拉開新的序幕，用嶄新的面貌與空間，繼續為您帶來美好的產品及服務。<br>
     我們即將開幕囉！<br>
     Johanna竭誠歡迎您來新店坐坐，和我們一起聊聊天，感受這份「一切都變成新」的喜樂與活力！
